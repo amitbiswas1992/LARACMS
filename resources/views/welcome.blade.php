@@ -79,7 +79,9 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Laravel 
+                    @section('footer')
+                    @stop
                 </div>
 
                 <div class="links">

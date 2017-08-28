@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','TasksController@index');
 
 Route::get('/about',function(){
 $customer= DB::table('customers')->get();
@@ -21,4 +19,8 @@ $customer= DB::table('customers')->get();
 return view ('about',compact('customer'));
 });
 
-Route::get('/post','PostController@getPost');
+Route::get('/post','PostsController@getPost');
+
+
+
+Route::get('/post/create','PostsController@create');
