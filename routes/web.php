@@ -22,5 +22,7 @@ return view ('about',compact('customer'));
 Route::get('/post','PostsController@getPost');
 
 
-
+Route::get('/post','PostsController@post');
 Route::get('/post/create','PostsController@create');
+
+Route::post('/post','PostsController@store');

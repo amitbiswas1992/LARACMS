@@ -20,11 +20,29 @@ class PostsController extends Controller
 
     }
 
- 
-
    public function create()
    {
         return view('/create');
+
+   }
+public function post()
+{
+
+    $posts=Post::all();
+     return view ('post',compact('posts'));
+
+}
+
+   public function store()
+   {
+    $this->validate(request(), [
+        'title'=>'required| min:8 ',
+        'body'=>'required | min:10'
+        ]);
+
+        Post::create(request(['title','body']));
+
+       return redirect('/');
 
    }
 }
