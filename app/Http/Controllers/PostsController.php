@@ -45,5 +45,13 @@ public function post()
        return redirect('/');
 
    }
+public function show($id)
+{
+    $post= Post::find($id);
+    return view ('/show', compact('post'));
 }
+
+
+}
+
 

@@ -26,3 +26,5 @@ Route::get('/post','PostsController@post');
 Route::get('/post/create','PostsController@create');
 
 Route::post('/post','PostsController@store');
+
+Route::get('/post/show/{id}','PostsController@show');
